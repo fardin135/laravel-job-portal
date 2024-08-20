@@ -19,6 +19,10 @@ return new class extends Migration
 	        $table->string('contact_form_mobile');
             $table->longText('contact_form_query');
 	        $table->timestamps();
+            
+            // Add  index
+            $table->index('contact_form_email');
+
         });
     }
 

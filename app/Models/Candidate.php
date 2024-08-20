@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\EduInfo;
+use App\Models\SavedJob;
 use App\Models\BasicInfo;
 use App\Models\Application;
 use Illuminate\Database\Eloquent\Model;
@@ -34,6 +35,10 @@ class Candidate extends Model
         {
             return $this->hasMany(Application::class);
         }
+    public function savedJobs(): HasMany
+    {
+        return $this->hasMany(SavedJob::class);
+    }
 
 // Candidate hasOne = basicInfo, eduInfo, professionalAndExperience
             public function basicInfo(): HasOne

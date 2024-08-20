@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Company;
+use App\Models\SavedJob;
 use App\Models\BasicInfo;
 use App\Models\Candidate;
 use Laravel\Sanctum\HasApiTokens;
@@ -79,7 +80,11 @@ class User extends Authenticatable
         public function company(): HasOne{
             return $this->hasOne(Company::class);
         }
-
+//User hasOne = companyDetail
+    public function companyDetail(): HasOne
+    {
+        return $this->hasOne(CompanyDetail::class);
+    }
 // User hasMany = jobs, applications
             public function jobs(): HasMany{
                 return $this->hasMany(User::class);
@@ -87,7 +92,9 @@ class User extends Authenticatable
                 public function applications(): HasMany{
                     return $this->hasMany(Application::class);
                 }
-
+                    public function savedJobs(): HasMany{
+                        return $this->hasMany(SavedJob::class);
+                    }
 // User hasOne = basicInfo, eduInfo, professionalAndExperience
                     public function basicInfo(): HasOne
                     {

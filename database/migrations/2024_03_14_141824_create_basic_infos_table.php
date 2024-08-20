@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('basic_infos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('candidate_id');
             $table->foreign('candidate_id')->references('id')->on('candidates')->onDelete('cascade');
             $table->string('full_name');
+            $table->string('candidate_image')->nullable();
             $table->string('fathers_name')->nullable();
             $table->string('mothers_name')->nullable();
             $table->date('birth_date');
             $table->string('blood_group')->nullable();
-            $table->string('nid_no');
-            $table->string('passport_no')->nullable();
             $table->string('cell_no');
             $table->string('emergency_contact_no')->nullable();
             $table->string('emergency_contact_email')->nullable();
@@ -29,10 +30,13 @@ return new class extends Migration
             $table->string('linkedin')->nullable();
             $table->string('facebook')->nullable();
             $table->string('github')->nullable();
-            $table->string('behance_dribble')->nullable();
             $table->string('portfolio_website')->nullable();
-            $table->tinyInteger('completed_profile')->default(0);
             $table->timestamps();
+
+            // Add index
+            $table->index('id');
+            $table->index('user_id');
+            $table->index('candidate_id');
         });
     }
 

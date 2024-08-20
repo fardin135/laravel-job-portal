@@ -20,16 +20,16 @@ class Application extends Model
     {
         return $this->belongsTo(User::class);
     }
-        public function company(): BelongsTo
+        public function candidate(): BelongsTo
         {
-            return $this->belongsTo(Company::class);
+            return $this->belongsTo(Candidate::class);
         }
-            public function candidate(): BelongsTo
+            public function job(): BelongsTo
             {
-                return $this->belongsTo(Candidate::class);
+                return $this->belongsTo(Job::class);
             }
-                public function job(): BelongsTo
+                public function company(): BelongsTo
                 {
-                    return $this->belongsTo(Job::class);
+                    return $this->belongsTo(Company::class);
                 }
 }

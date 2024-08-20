@@ -10,6 +10,6 @@ class AboutPageController extends Controller
     //
     public function about(){
         $company_info = Jobpulse::first();
-        return view('1_pages.about', compact('company_info'));
+        return view('main_pages.about', compact('company_info'));
     }
 }

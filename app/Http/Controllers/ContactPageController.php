@@ -8,7 +8,7 @@ use App\Models\Contact;
 class ContactPageController extends Controller
 {
     public function contact(){
-        return view('1_pages.contact');
+        return view('main_pages.contact');
     }
     public function contact_us(Request $request){
         $data = $request->validate([

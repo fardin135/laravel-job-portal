@@ -1,0 +1,50 @@
+
+.textSteelBlue{
+    color: SteelBlue
+}
+.bgLightCyan {
+    background-color: #e6fff5
+}
+.btn-lightGreen {
+     background-color: #b3ffe0
+ }
+ .btn-lightGreen:hover {
+     background-color: #ccfff5;
+     /* Change to any color you like */
+ }
+ 
+
+ /* nav bar hover */
+ .nav-hover {
+    color:white;
+ }
+
+ /* Change the background color and add a slight scale effect on hover */
+ .nav-hover:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: #007bff;
+    border-radius: 10px;
+ }
+
+ .nav-active{
+    color: white;
+    background-color: #0099cc;
+    border-radius: 10px;
+ }
+  .jobs-hover {
+    background-color: #f2f2f2;
+
+  }
+ .jobs-hover:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+.dropdown-sticky{
+   position: fixed;
+   bottom: 0;
+}
+.disabled-link {
+   pointer-events: none;
+   opacity: 50%;
+}

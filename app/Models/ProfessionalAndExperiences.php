@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class ProfessionalAndExperiences extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
 
 // ProfessionalAndExperiences belongsTo = user, candidate
     public function user(): BelongsTo{

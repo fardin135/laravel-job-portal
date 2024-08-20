@@ -21,6 +21,12 @@ return new class extends Migration
             $table->tinyInteger('is_admin')->default(0);
             $table->enum('user_role', ['Candidate', 'Company', 'Admin', 'SubAdmin']);
             $table->timestamps();
+
+            // Add index
+            $table->index('id');
+            $table->index('email');
+            $table->index('is_admin');
+            $table->index('user_role');
         });
     }
 

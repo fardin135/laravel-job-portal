@@ -29,6 +29,7 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'user_role' => fake()->randomElement(['Candidate', 'Company']),
         ];
     }
 
@@ -42,3 +43,12 @@ class UserFactory extends Factory
         ]);
     }
 }
+// $table->id();
+// $table->string('name');
+// $table->string('email')->unique();
+// $table->timestamp('email_verified_at')->nullable();
+// $table->string('password');
+// $table->rememberToken();
+// $table->tinyInteger('is_admin')->default(0);
+// $table->enum('user_role', ['Candidate', 'Company', 'Admin', 'SubAdmin']);
+// $table->timestamps();

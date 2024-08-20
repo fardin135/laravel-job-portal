@@ -1,4 +1,4 @@
-@extends('1_layout.main')
+@extends('main_page_layout.main')
 @push('title')
     <title>Login Page</title>
 

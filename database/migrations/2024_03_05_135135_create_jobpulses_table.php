@@ -17,6 +17,12 @@ return new class extends Migration
 	        $table->longText('about_company_history');
 	        $table->longText('about_company_vision');
 	        $table->timestamps();
+
+            // Add index
+            $table->index('jobpulse_id');
+            $table->index('about_company_img');
+            $table->index('about_company_history');
+            $table->index('about_company_vision');
         });
     }
 
